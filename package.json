@@ -7,7 +7,8 @@
     "feuid2": "bin/main.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "snyk --dev test",
+    "postinstall": "snyk --dev protect",
     "serve": "babel -w src/ -d bin/",
     "build": "babel src/ -d bin/"
   },
@@ -31,7 +32,8 @@
   "homepage": "https://github.com/hnjd-fe/feuid2#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0"
+    "babel-preset-env": "^1.7.0",
+    "snyk": "^1.248.0"
   },
   "dependencies": {
     "babel-core": "^6.26.3",
